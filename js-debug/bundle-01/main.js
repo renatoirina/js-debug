@@ -32,8 +32,11 @@ function addIfEven(num) {
 
 
 // ESERCIZIO 3
+// 1. Questa funzione dovrebbe stampare i numeri da 0 a 4.
+// 2. Sì, ci sono errori di sintassi. La dichiarazione del ciclo `for` ha una virgola invece di un punto e virgola tra le espressioni.
+// 3. Sì, la virgola usata invece del punto e virgola potrebbe causare un comportamento imprevisto, ma non ci sono errori logici concettuali.
 function loopToFive() {
-    for (let i = 0, i < 5, i++) {
+    for (let i = 0; i < 5; i++) { // Correzione: sostituisco la virgola con il punto e virgola
         console.log(i);
     }
 }
