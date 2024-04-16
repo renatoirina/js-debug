@@ -20,8 +20,11 @@ for (let i = 0; i < 5; i++) { // Correzione: cambio la condizione da i > 5 a i <
 
 
 // ESERCIZIO 2
+// 1. Questa funzione dovrebbe restituire `num + 5` se `num` è pari, altrimenti restituirà `num` stesso.
+// 2. Sì, c'è un errore di sintassi. Nella condizione `if`, `=` è un operatore di assegnazione, ma dovrebbe essere usato `==` o `===` per confrontare.
+// 3. No, non ci sono errori logici.
 function addIfEven(num) {
-    if (num % 2 = 0) {
+    if (num % 2 === 0) { // Correzione: cambio `=` a `===` per confrontare invece di assegnare
         return num + 5;
     }
     return num;
