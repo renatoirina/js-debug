@@ -43,14 +43,20 @@ function loopToFive() {
 
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
+// 1. Questa funzione dovrebbe restituire una lista di numeri pari dall'array `numbers`.
+// 2. Sì, ci sono diversi errori di sintassi:
+//    - Nella condizione del ciclo `for`, c'è un punto e virgola in eccesso dopo l'ultima espressione.
+//    - Nell'istruzione `if`, `=` è usato al posto di `===` o `==` per confrontare.
+//    - Dopo l'istruzione `if`, c'è un punto e virgola in eccesso.
+// 3. Sì, c'è un errore logico perché la condizione nell'istruzione `if` è sbagliata e `numbers` non viene usato correttamente per controllare la parità dei numeri. Inoltre, l'array `evenNumbers` non viene popolato correttamente e la dichiarazione `return evenNumbers` è posizionata in modo tale da restituire l'array dopo la prima iterazione del ciclo. 
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) {
-        if (numbers % 2 = 0); {
-            evenNumbers.push(i);
+    for (let i = 0; i < numbers.length; i++) { // Correzione: rimuovo il punto e virgola in eccesso dopo i
+        if (numbers[i] % 2 === 0) { // Correzione: cambio `=` a `===` per confrontare invece di assegnare
+            evenNumbers.push(numbers[i]);
         }
-        return evenNumbers;
-    }
+    } // Correzione: sposto la dichiarazione del return all'esterno del ciclo
+    return evenNumbers;
 }
 displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
