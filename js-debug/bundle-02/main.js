@@ -11,10 +11,13 @@
 
 
 // ESERCIZIO 1
+// 1. Questo codice definisce una funzione `checkAge` che determina se l'età dell'utente è inferiore a 18 e stampa un messaggio di conseguenza.
+// 2. No, non ci sono errori di sintassi.
+// 3. No, non ci sono errori logici.
 function checkAge() {
     const myAge = 32;
-    const message = '';
-
+    let message = ''; // Correzione: cambiato da const a let per consentire la modifica
+​
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
@@ -88,32 +91,3 @@ function checkAccessImproved() {
         }
     }
     checkAccessImproved();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
