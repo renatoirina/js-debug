@@ -11,7 +11,10 @@
 
 
 // ESERCIZIO 1
-for (let i = 0; i > 5; i++) {
+// 1. Questo codice dovrebbe stampare i numeri da 0 a 4.
+// 2. Sì, c'è un errore di sintassi. Il test condizionale nella dichiarazione del ciclo `for` è `i > 5`, che impedisce al ciclo di essere eseguito perché l'iterazione iniziale non soddisfa la condizione.
+// 3. Sì, c'è un errore logico perché la condizione del ciclo impedisce al ciclo di eseguire iterazioni.
+for (let i = 0; i < 5; i++) { // Correzione: cambio la condizione da i > 5 a i < 5
     console.log(i);
 }
 
