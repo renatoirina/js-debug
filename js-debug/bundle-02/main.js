@@ -38,8 +38,11 @@ printColorsNumber();
 
 
 // ESERCIZIO 3
+// 1. Questo codice definisce una funzione `addNumbers` che chiede all'utente di inserire un numero, lo converte in un numero intero e aggiunge 12, quindi stampa il risultato.
+// 2. No, non ci sono errori di sintassi.
+// 3. Sì, c'è un errore logico perché `userNumber` è trattato come stringa e non viene convertito in un numero prima di essere usato in operazioni matematiche.
 function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
+    const userNumber = parseInt(prompt('Inserisci un numero')); // Correzione: converto la stringa in un numero
     const total = userNumber + 12;
 
     console.log(`Il risultato finale è ${total}`);
