@@ -27,9 +27,12 @@ function checkAge() {
 checkAge();
 
 // ESERCIZIO 2
+// 1. Questo codice definisce una funzione `printColorsNumber` che stampa il numero di colori presenti nell'array `colors`.
+// 2. Sì, c'è un errore di sintassi. Si scrive "lenght" invece di "length" per ottenere la lunghezza dell'array `colors`.
+// 3. No, non ci sono errori logici.
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`); // Correzione: corretto "lenght" in "length"
 }
 printColorsNumber();
 
