@@ -11,6 +11,9 @@
 
 
 // ESERCIZIO 1 (suggerimento: ci sono 6 errori)
+// 1. Questo codice definisce un array di oggetti auto e poi filtra questo array in tre sottoarray: uno contenente le auto a benzina, uno le auto a diesel e uno le auto con un tipo diverso da benzina o diesel. Infine, stampa questi sottoarray.
+// 2. Sì, ci sono errori di sintassi e semantici.
+// 3. Sì, ci sono errori logici.
 const cars = [
     {
         manufacturer: 'Ford',
@@ -56,7 +59,8 @@ const cars = [
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
+    // Correzione: Aggiunto una virgola dopo l'oggetto Seat
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,14 +68,17 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+// Correzione: Cambiato "=>" in "===" nella funzione di filtro
+const gasolineCars = cars.filter((auto) => auto.type === 'benzina');
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+// Correzione: Aggiunto un return nella funzione di filtro
+const dieselCars = cars.filter((auto) => {
+    return auto.type === 'diesel';
 });
 
-const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+// Correzione: Corretto l'operatore logico nella funzione di filtro
+const otherCars = cars.filter((auto) => {
+    return auto.type !== 'benzina' && auto.type !== 'diesel';
 });
 
 console.log('Auto a benzina');
@@ -83,4 +90,5 @@ console.log('*******************************');
 console.log(dieselCars);
 
 console.log('Tutte le altre auto');
+console.log('*******************************');
 console.log(otherCars);
