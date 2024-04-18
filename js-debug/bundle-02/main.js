@@ -51,17 +51,20 @@ addNumbers();
 
 
 // ESERCIZIO 4
+// 1. Questo codice definisce una funzione `checkAccess` che chiede all'utente di inserire un indirizzo email e controlla se appartiene alla lista `addresses`, quindi stampa un messaggio di accesso consentito o negato.
+// 2. No, non ci sono errori di sintassi.
+// 3. Sì, c'è un errore logico perché `grantAccess` è inizializzato come una stringa, ma poi viene confrontato come un booleano.
 function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false; // Correzione: cambiato da 'false' a false
 
     if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
+        grantAccess = true; // Correzione: assegnato un booleano invece di una stringa
     }
 
-    if (grantAccess === true) {
+    if (grantAccess) { // Correzione: rimosso il confronto con 'true'
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
@@ -71,12 +74,15 @@ checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
+// 1. Questo codice definisce una funzione `checkAccessImproved` che chiede all'utente di inserire un indirizzo email e controlla se appartiene alla lista `addresses`, quindi stampa un messaggio di accesso consentito o negato.
+// 2. No, non ci sono errori di sintassi.
+// 3. No, non ci sono errori logici.
 function checkAccessImproved() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -84,16 +90,16 @@ function checkAccessImproved() {
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
-
+                grantAccess = true;
             }
 
         }
-
-        if (grantAccess) {
-            console.log('Accesso consentito!');
-        } else {
-            console.log('Accesso negato!');
-        }
     }
-    checkAccessImproved();
+
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccessImproved(); // Correzione: spostato al di fuori della funzione per evitare un loop infinito
